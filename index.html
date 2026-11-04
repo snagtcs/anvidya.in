@@ -6,12 +6,6 @@
     <title>Anvidya | Academy & Tech Consulting</title>
     <style>
         :root {
-            var(--primary-blue): #07375c;
-            var(--accent-red): #ff6b6b;
-            var(--bg-light): #f4f7f9;
-            var(--bg-card): #ffffff;
-            var(--text-dark): #2d3748;
-            var(--text-muted): #718096;
             --primary-blue: #07375c; 
             --accent-red: #ff6b6b;   
             --bg-light: #f4f7f9;
@@ -98,7 +92,8 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
 
-        .card:nth-child(2) {
+        /* Alternating colors for Even numbered cards (Card 2 & 4) */
+        .card:nth-child(even) {
             border-top-color: var(--accent-red);
         }
 
@@ -139,7 +134,7 @@
             font-size: 1.1rem;
         }
 
-        .card:nth-child(2) ul li::before {
+        .card:nth-child(even) ul li::before {
             color: var(--accent-red);
         }
 
@@ -153,10 +148,10 @@
             border-radius: 6px;
             font-weight: 600;
             text-align: center;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
         }
         
-        .card:nth-child(2) .card-link {
+        .card:nth-child(even) .card-link {
             background-color: var(--accent-red);
         }
 
@@ -198,7 +193,7 @@
 
     <header>
         <a href="index.html">
-            <img src="image.png" alt="Anvidya Academy & Tech Consulting Logo" class="logo-img">
+            <img src="image_2.png" alt="Anvidya Academy & Tech Consulting Logo" class="logo-img">
         </a>
     </header>
 
@@ -208,7 +203,7 @@
     </section>
 
     <section class="programs">
-        <!-- AI Learning Card -->
+        <!-- Card 1: AI Learning -->
         <div class="card">
             <h2>AI LEARNING</h2>
             <div class="subtitle">B.Tech Support & Deep Learning</div>
@@ -222,7 +217,7 @@
             <a href="ai-learning.html" class="card-link">View Engineering Syllabus →</a>
         </div>
 
-        <!-- Academic Coaching Card -->
+        <!-- Card 2: Academic Coaching -->
         <div class="card">
             <h2>ACADEMIC COACHING</h2>
             <div class="subtitle">Computer Science Classes</div>
@@ -236,7 +231,7 @@
             <a href="academic-coaching.html" class="card-link">View School Curriculums →</a>
         </div>
 
-        <!-- Tech Consulting Card -->
+        <!-- Card 3: Tech Consulting -->
         <div class="card">
             <h2>TECH CONSULTING</h2>
             <div class="subtitle">Enterprise IT Services</div>
@@ -248,6 +243,19 @@
                 <li>End-to-End Project Execution</li>
             </ul>
             <a href="tech-consulting.html" class="card-link">View Consulting Services →</a>
+        </div>
+
+        <!-- Card 4: Cohorts, Workshops & Webshop -->
+        <div class="card">
+            <h2>COHORTS & WORKSHOPS</h2>
+            <div class="subtitle">Masterclasses & Partnerships</div>
+            <ul>
+                <li><strong>Live Cohorts:</strong> Intensive masterclasses on AI, Agents, and Architecture.</li>
+                <li><strong>Institutional Connect:</strong> Guest lectures, seminars, and campus workshops for schools and colleges.</li>
+                <li><strong>Study Materials:</strong> Downloadable PDF notes and B.Tech project source codes.</li>
+                <li><strong>Digital Assets:</strong> Premium enterprise consulting templates and frameworks.</li>
+            </ul>
+            <a href="cohorts-store.html" class="card-link">Explore & Connect →</a>
         </div>
     </section>
 
