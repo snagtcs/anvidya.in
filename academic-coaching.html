@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Coaching | Anvidya</title>
+    <style>
+        :root {
+            --primary-blue: #07375c; 
+            --accent-red: #ff6b6b;   
+            --bg-light: #f4f7f9;
+            --bg-card: #ffffff;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        
+        header {
+            background-color: white; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid #eaeaea; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100;
+        }
+        .logo-img { height: auto; max-width: 200px; }
+        .back-nav { text-decoration: none; color: var(--primary-blue); font-weight: 600; font-size: 1.1rem; }
+        .back-nav:hover { color: var(--accent-red); }
+
+        .hero { text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, var(--primary-blue) 0%, #0a2540 100%); color: white; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; color: #e2e8f0; max-width: 800px; margin: 0 auto; }
+
+        .programs { padding: 4rem 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
+        
+        .card { background-color: var(--bg-card); border-radius: 12px; padding: 2.5rem; border-top: 5px solid var(--accent-red); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); }
+        .card h2 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--primary-blue); text-transform: uppercase; }
+        .card .subtitle { color: var(--accent-red); font-weight: 600; margin-bottom: 1.5rem; font-size: 1rem; }
+        .card ul { list-style: none; }
+        .card ul li { margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; color: var(--text-dark); font-weight: 500; font-size: 0.95rem;}
+        .card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-red); font-weight: bold; }
+
+        footer { background-color: var(--primary-blue); padding: 2rem 5%; text-align: center; color: white; border-top: 4px solid var(--accent-red); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <!-- Using your Anvidya logo -->
+            <img src="image.png" alt="Anvidya Logo" class="logo-img">
+        </a>
+        <a href="index.html" class="back-nav">← Back to Home</a>
+    </header>
+
+    <section class="hero">
+        <h1>Academic Coaching Curriculum</h1>
+        <p>Comprehensive computer science, application, and cutting-edge Artificial Intelligence syllabus coverage for classes IX through XII across major Indian boards.</p>
+    </section>
+
+    <section class="programs">
+        <!-- WB Board Card -->
+        <div class="card">
+            <h2>WB Board (WBBSE / WBCHSE)</h2>
+            <div class="subtitle">CS, Application & AI</div>
+            <ul>
+                <li><strong>Class IX - X:</strong> Computer Fundamentals, Number Systems, MS Office Suite, Basic HTML, and Introduction to C/Scratch programming.</li>
+                <li><strong>Class XI - XII (Application/Science):</strong> Logic Gates & Boolean Algebra, Networking, HTML & Web Design, DBMS, and Programming in C/C++.</li>
+                <li><strong>Class XI - XII (Artificial Intelligence):</strong> Newly introduced 2024-25 syllabus covering search methods, evolutionary algorithms, knowledge representation, Machine Learning, and Ethics in AI.</li>
+            </ul>
+        </div>
+
+        <!-- ICSE Board Card -->
+        <div class="card">
+            <h2>ICSE & ISC Board</h2>
+            <div class="subtitle">Computer & Robotics/AI</div>
+            <ul>
+                <li><strong>ICSE (Class IX - X):</strong> Object-Oriented Programming (OOP), Java via BlueJ. <em>Robotics & AI Curriculum:</em> Deterministic vs Probabilistic computing, AI Project Cycle, and Robot as a System (mechanical/electronic blocks).</li>
+                <li><strong>ISC (Class XI - XII):</strong> Advanced Java, Boolean Algebra, Data Structures. <em>AI Curriculum:</em> Natural Language Processing (NLP), Computer Vision, Artificial Neural Networks (ANN), Hypothesis Testing, and Data Preparation (NumPy/Pandas).</li>
+            </ul>
+        </div>
+
+        <!-- CBSE Board Card -->
+        <div class="card">
+            <h2>CBSE Board</h2>
+            <div class="subtitle">CS, IP & AI Skill Subject</div>
+            <ul>
+                <li><strong>Class IX - X:</strong> Basics of IT, Python, HTML. <em>AI (Skill Code 417):</em> Introduction to Generative AI, AI Project Cycle (Problem Scoping, Data Acquisition), Neural Networks, Data Literacy, Math for AI, and basic Python.</li>
+                <li><strong>Class XI - XII:</strong> Computational Thinking, Advanced Python, SQL, Networking. <em>AI (Skill Code 843):</em> Advanced Machine Learning models, Model Evaluation, Natural Language Processing, and advanced Python integrations.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p style="color: #cbd5e1; font-size: 0.9rem;">© 2026 Anvidya Academy & Consulting Pvt Ltd. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -6,9 +6,14 @@
     <title>Anvidya | Academy & Tech Consulting</title>
     <style>
         :root {
-            /* Colors sampled directly from your logo */
-            --primary-blue: #07375c; /* Dark blue text color */
-            --accent-red: #ff6b6b;   /* Coral/Red brain color */
+            var(--primary-blue): #07375c;
+            var(--accent-red): #ff6b6b;
+            var(--bg-light): #f4f7f9;
+            var(--bg-card): #ffffff;
+            var(--text-dark): #2d3748;
+            var(--text-muted): #718096;
+            --primary-blue: #07375c; 
+            --accent-red: #ff6b6b;   
             --bg-light: #f4f7f9;
             --bg-card: #ffffff;
             --text-dark: #2d3748;
@@ -28,7 +33,6 @@
             line-height: 1.6;
         }
 
-        /* Header & Logo */
         header {
             background-color: white;
             padding: 1.5rem 5%;
@@ -42,10 +46,9 @@
 
         .logo-img {
             height: auto;
-            max-width: 280px; /* Perfectly sizes your image.png */
+            max-width: 280px; 
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 5rem 2rem;
@@ -70,14 +73,13 @@
             margin: 0 auto;
         }
 
-        /* Programs & Services Grid */
         .programs {
             padding: 4rem 5%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
             max-width: 1200px;
-            margin: -3rem auto 3rem auto; /* Pulls cards slightly over the hero section */
+            margin: -3rem auto 3rem auto; 
         }
 
         .card {
@@ -87,6 +89,8 @@
             border-top: 5px solid var(--primary-blue);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -115,6 +119,7 @@
 
         .card ul {
             list-style: none;
+            flex-grow: 1;
         }
 
         .card ul li {
@@ -125,7 +130,6 @@
             font-weight: 500;
         }
 
-        /* Custom checkmark bullets matching the theme */
         .card ul li::before {
             content: "✓";
             position: absolute;
@@ -139,7 +143,28 @@
             color: var(--accent-red);
         }
 
-        /* Footer */
+        .card-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 10px 20px;
+            background-color: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .card:nth-child(2) .card-link {
+            background-color: var(--accent-red);
+        }
+
+        .card-link:hover {
+            opacity: 0.9;
+            color: white;
+        }
+
         footer {
             background-color: var(--primary-blue);
             padding: 2rem 5%;
@@ -172,8 +197,9 @@
 <body>
 
     <header>
-        <!-- Using your exact logo file -->
-        <img src="image.png" alt="Anwida Academy & Tech Consulting Logo" class="logo-img">
+        <a href="index.html">
+            <img src="image.png" alt="Anvidya Academy & Tech Consulting Logo" class="logo-img">
+        </a>
     </header>
 
     <section class="hero">
@@ -185,7 +211,7 @@
         <!-- AI Learning Card -->
         <div class="card">
             <h2>AI LEARNING</h2>
-            <div class="subtitle">Python - Deep Learning</div>
+            <div class="subtitle">B.Tech Support & Deep Learning</div>
             <ul>
                 <li>Artificial Intelligence Fundamentals</li>
                 <li>Machine Learning Algorithms</li>
@@ -193,6 +219,7 @@
                 <li>Future Tech Skills Development</li>
                 <li>Hands-on Industry Projects</li>
             </ul>
+            <a href="ai-learning.html" class="card-link">View Engineering Syllabus →</a>
         </div>
 
         <!-- Academic Coaching Card -->
@@ -203,9 +230,10 @@
                 <li>Class IX - XII (Specialized Coaching)</li>
                 <li>ICSE / ISC Board Curriculum</li>
                 <li>CBSE / WBHSE Board Curriculum</li>
-                <li>B. Tech / BCA / MCA Project Support</li>
+                <li>Computer Application Syllabus Focus</li>
                 <li>Degree Level Academic Guidance</li>
             </ul>
+            <a href="academic-coaching.html" class="card-link">View School Curriculums →</a>
         </div>
 
         <!-- Tech Consulting Card -->
@@ -219,6 +247,7 @@
                 <li>Corporate Technology Strategy</li>
                 <li>End-to-End Project Execution</li>
             </ul>
+            <a href="tech-consulting.html" class="card-link">View Consulting Services →</a>
         </div>
     </section>
 
