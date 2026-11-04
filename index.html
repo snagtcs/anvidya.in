@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvidya | Academy & Tech Consulting</title>
+    <style>
+        :root {
+            /* Colors sampled directly from your logo */
+            --primary-blue: #07375c; /* Dark blue text color */
+            --accent-red: #ff6b6b;   /* Coral/Red brain color */
+            --bg-light: #f4f7f9;
+            --bg-card: #ffffff;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header & Logo */
+        header {
+            background-color: white;
+            padding: 1.5rem 5%;
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-img {
+            height: auto;
+            max-width: 280px; /* Perfectly sizes your image.png */
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0a2540 100%);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--accent-red);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Programs & Services Grid */
+        .programs {
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: -3rem auto 3rem auto; /* Pulls cards slightly over the hero section */
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            padding: 2.5rem;
+            border-top: 5px solid var(--primary-blue);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .card:nth-child(2) {
+            border-top-color: var(--accent-red);
+        }
+
+        .card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card .subtitle {
+            color: var(--accent-red);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            margin-bottom: 1rem;
+            padding-left: 1.8rem;
+            position: relative;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Custom checkmark bullets matching the theme */
+        .card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .card:nth-child(2) ul li::before {
+            color: var(--accent-red);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            padding: 2rem 5%;
+            text-align: center;
+            color: white;
+            border-top: 4px solid var(--accent-red);
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-red);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .programs { margin-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Using your exact logo file -->
+        <img src="image.png" alt="Anwida Academy & Tech Consulting Logo" class="logo-img">
+    </header>
+
+    <section class="hero">
+        <h1>Smart Learning Hub <span>&</span> IT Solutions</h1>
+        <p>Future-ready education through Artificial Intelligence alongside enterprise-grade technology consulting.</p>
+    </section>
+
+    <section class="programs">
+        <!-- AI Learning Card -->
+        <div class="card">
+            <h2>AI LEARNING</h2>
+            <div class="subtitle">Python - Deep Learning</div>
+            <ul>
+                <li>Artificial Intelligence Fundamentals</li>
+                <li>Machine Learning Algorithms</li>
+                <li>Prompt Engineering & LLMs</li>
+                <li>Future Tech Skills Development</li>
+                <li>Hands-on Industry Projects</li>
+            </ul>
+        </div>
+
+        <!-- Academic Coaching Card -->
+        <div class="card">
+            <h2>ACADEMIC COACHING</h2>
+            <div class="subtitle">Computer Science Classes</div>
+            <ul>
+                <li>Class IX - XII (Specialized Coaching)</li>
+                <li>ICSE / ISC Board Curriculum</li>
+                <li>CBSE / WBHSE Board Curriculum</li>
+                <li>B. Tech / BCA / MCA Project Support</li>
+                <li>Degree Level Academic Guidance</li>
+            </ul>
+        </div>
+
+        <!-- Tech Consulting Card -->
+        <div class="card">
+            <h2>TECH CONSULTING</h2>
+            <div class="subtitle">Enterprise IT Services</div>
+            <ul>
+                <li>System Architecture & Design</li>
+                <li>API Management & Integrations</li>
+                <li>AI-Driven Workflow Automation</li>
+                <li>Corporate Technology Strategy</li>
+                <li>End-to-End Project Execution</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:info@anvidya.com">Contact: info@anvidya.com</a>
+        </div>
+        <p style="color: #cbd5e1; font-size: 0.9rem;">
+            © 2026 Anvidya Academy & Consulting Pvt Ltd. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
